@@ -1,0 +1,5 @@
+<div class="grid-container">
+  <div *ngFor="let cellState of state; index as i;" class="grid-item" (click)="select(i)">
+    {{cellState}}
+  </div>
+</div>

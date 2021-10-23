@@ -1,0 +1,10 @@
+<p *ngIf="!winner">Next player: {{isNext}}</p>
+<p *ngIf="winner">Winner: {{winner}}</p>
+<ol>
+  <li *ngFor="let state of history; index as i; first as first" >
+    <button (click)="select(i)" [class]="{selected: i === selected}">
+      <span *ngIf="first">Go to game start</span>
+      <span *ngIf="!first">Go to move {{i}}</span>
+    </button>
+  </li>
+</ol>
